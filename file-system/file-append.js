@@ -5,7 +5,7 @@ const data = {
     "age":"Please enter your age"
 };
 
-fs.appendFile("content.text", JSON.stringify(data), (err)=>{
+fs.appendFile("content.txt", "\n"+JSON.stringify(data), (err)=>{
     if(err){
         console.log(err);
     }else{
