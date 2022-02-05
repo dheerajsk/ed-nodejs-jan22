@@ -29,7 +29,6 @@ function readFile(num){
         }, 4000); 
     });
     return promise;
-    
 }
 
 const promiseResult = readFile(0);
@@ -37,7 +36,7 @@ promiseResult.then(
     (data)=>{
         printDataFunction(null, data);
     },
-    (err)=> {console.log(err);}
+    (err)=> {printDataFunction(err, null);}
 )
 
 const promiseResult2 = readFile(1);
@@ -45,7 +44,7 @@ promiseResult2.then(
     (data)=>{
         printDataFunction(null, data);
     },
-    (err)=> {console.log(err);}
+    (err)=> {printDataFunction(err, null);}
 )
 
 console.log("Task 4");
