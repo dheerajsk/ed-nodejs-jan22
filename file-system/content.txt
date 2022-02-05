@@ -3,4 +3,4 @@ As you can see the approaches require an instance to work on.
 You don't work on the class. Reflection is what you are trying
  to achieve in the context of OOP; however Javascript (which is
   not OOP) 
-deals with it in a different way.
+deals with it in a different way.{"name":"Please enter your name","age":"Please enter your age"}{"name":"Please enter your name","age":"Please enter your age"}
