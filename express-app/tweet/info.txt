@@ -1,0 +1,20 @@
+Tweet Module
+
+Functionalities.
+1. New/Send Tweet
+2. Modify Tweet
+3. Deleting Tweet
+4. Get Tweets
+5. Love/Like Tweet
+6. Report Tweet
+7. Re Tweet
+8. Share Tweet
+9. Get tweets of a friend.
+10. Comment on a tweet.
+11. Tweets based on hastags
+12. Bookmark a tweet.
+13. Update Comment
+14. Delete Comment
+15. Get comments of tweet
+16. Get trending tweets,.
+

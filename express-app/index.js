@@ -13,6 +13,7 @@
 // Step 1: Import express
 
 const express = require("express");
+const userAuthRoutes = require("./user/routes/user-auth-routes");
 
 // Step 2: Create server
 const server = express();
@@ -21,6 +22,9 @@ const server = express();
 server.listen(3200, ()=>{
     console.log("Server is listenng");
 });
+
+// Routings.
+server.use("/api/user/auth", userAuthRoutes);
 
 // Step 4: Handle default requests.
 server.get("/", (req, res)=>{

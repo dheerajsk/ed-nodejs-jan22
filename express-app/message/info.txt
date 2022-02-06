@@ -1,0 +1,7 @@
+Message Module
+
+1. Send a Message
+2. Delete a Message
+3. List Messages
+4. Reply to Message
+5. Attachments (low priority)
