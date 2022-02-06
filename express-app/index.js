@@ -11,9 +11,9 @@
 // database.
 
 // Step 1: Import express
-
 const express = require("express");
 const userAuthRoutes = require("./user/routes/user-auth-routes");
+const bodyParser = require("body-parser");
 
 // Step 2: Create server
 const server = express();
@@ -22,6 +22,8 @@ const server = express();
 server.listen(3200, ()=>{
     console.log("Server is listenng");
 });
+// Order of middlewares matter.
+server.use(bodyParser.json());
 
 // Routings.
 server.use("/api/user/auth", userAuthRoutes);
