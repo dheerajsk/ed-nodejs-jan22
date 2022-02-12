@@ -3,7 +3,7 @@
 For User api.
 
 1. Create User Model - done
-2. Create mongodb db
-3. Connect to mongodb
-4. Create repository to add user to db
+2. Create mongodb db - done
+3. Connect to mongodb - done
+4. Create repository to add user to db - 
 5. Call repository from controller.
