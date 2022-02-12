@@ -14,9 +14,13 @@
 const express = require("express");
 const userAuthRoutes = require("./user/routes/user-auth-routes");
 const bodyParser = require("body-parser");
+const mongodb = require("./config/mongodb");
 
 // Step 2: Create server
 const server = express();
+
+// Connect to mongodb
+mongodb.connect();
 
 // Step 3: open a port and listen for client
 server.listen(3200, ()=>{

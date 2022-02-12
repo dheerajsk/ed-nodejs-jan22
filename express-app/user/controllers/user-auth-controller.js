@@ -1,9 +1,12 @@
 // Job of controller is to take request and send response.
 
+const userModel = require("../models/user");
+
 exports.register = (req, res)=>{
-    console.log("This is register request");
-    console.log(req.url);
-    console.log(req.body);
+
+    const newUser = new userModel(req.body.name, req.body.email, 
+        req.body.password, req.body.gender);
+    // call repor (newUser)
     res.send("This is register");
 }
 
