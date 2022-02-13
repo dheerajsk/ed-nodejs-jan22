@@ -42,4 +42,12 @@ exports.getByID = (id, cb)=>{
             err=>{console.log(err)});
 }
 
+exports.delete = (id, cb)=>{
+    // Step 1: Find data
+    getUserCollection().deleteOne({_id: ObjectId(id)})
+        .then(
+            ()=> cb(),
+            err=>{console.log(err)});
+}
+
 

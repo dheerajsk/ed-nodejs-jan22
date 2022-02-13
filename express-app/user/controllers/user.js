@@ -20,3 +20,10 @@ exports.getByID = (req, res)=>{
         res.status(200).send(user);
     });
 }
+
+exports.delete = (req, res)=>{
+    const id = req.params.id;
+    repo.delete(id, ()=>{
+        res.status(200).send("Data Deleted");
+    });
+}
