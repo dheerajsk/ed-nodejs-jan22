@@ -4,8 +4,8 @@ Functionalities.
 1. New/Send Tweet
 2. Modify Tweet
 3. Deleting Tweet
-4. Get Tweets
-5. Love/Like Tweet
+4. Get Tweets of user
+5. Love/Like Tweet (api/tweet/:tweetID/love/:userID)
 6. Report Tweet
 7. Re Tweet
 8. Share Tweet

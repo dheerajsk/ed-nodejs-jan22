@@ -2,13 +2,15 @@
 const db = require("../../config/mongodb");
 const { ObjectId } = require("mongodb");
 
+const getUserCollection = ()=> {
+    return db.getCollection("user");
+}
 
 // model - user data
 // cb - callback to invoke after data is added
 exports.add = (model, cb)=>{
     // Step 1: Access collection.
-    const collection = db.getCollection("user");
-    collection.insertOne({name: model.name, email: model.email, password: model.password, gender: model.gender})
+    getUserCollection().insertOne({name: model.name, email: model.email, password: model.password, gender: model.gender})
         .then(()=>{
             cb();
         },
@@ -16,8 +18,6 @@ exports.add = (model, cb)=>{
 }
 
 exports.update = (model, cb)=>{
-    // Step 1: Get Collection
-    const collection = db.getCollection("user");
 
     // Step 2: Define how to find the document
     const filter = {_id: ObjectId(model._id)};
@@ -27,7 +27,7 @@ exports.update = (model, cb)=>{
     const update = { $set: {name: model.name, password: model.password, 
         gender: model.gender} };
 
-    collection.findOneAndUpdate(filter, update)
+        getUserCollection().findOneAndUpdate(filter, update)
         .then(()=>{
             cb()
         },
@@ -35,11 +35,8 @@ exports.update = (model, cb)=>{
 }
 
 exports.getByID = (id, cb)=>{
-    // Step 1: Get Collection
-    const collection = db.getCollection("user");
-
-    // Step 2: Find data
-    collection.findOne({_id: ObjectId(id)})
+    // Step 1: Find data
+    getUserCollection().findOne({_id: ObjectId(id)})
         .then(
             (user)=> cb(user),
             err=>{console.log(err)});
