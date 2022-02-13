@@ -33,6 +33,9 @@ server.use(bodyParser.json());
 // Routings.
 server.use("/api/user/auth", userAuthRoutes);
 server.use("/api/user/", userRoutes);
+server.use((req, res)=>{
+    res.status(404).send("Please check your path");
+})
 
 // Step 4: Handle default requests.
 server.get("/", (req, res)=>{

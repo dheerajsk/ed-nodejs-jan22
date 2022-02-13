@@ -15,4 +15,4 @@ User Module
 13. Block a User. - Post
 
 
-Index(middleware)-> Router ->  Controller-> Repo-> Controller-> Client
+Client-> Index(middleware)-> Router ->  Controller-> Repo-> Controller-> Client
