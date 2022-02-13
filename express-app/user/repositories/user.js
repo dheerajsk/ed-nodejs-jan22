@@ -1,5 +1,6 @@
 
 const db = require("../../config/mongodb");
+const { ObjectId } = require("mongodb");
 
 
 // model - user data
@@ -12,4 +13,24 @@ exports.add = (model, cb)=>{
             cb();
         },
         err=>{throw new Error(err);})
+}
+
+exports.update = (model, cb)=>{
+    // Step 1: Get Collection
+    const collection = db.getCollection("user");
+
+    // Step 2: Define how to find the document
+    const filter = {_id: ObjectId(model._id)};
+
+    // Step 3: Define what properties need to be updated
+    // set operator updates individual properties of document.
+    const update = { $set: {name: model.name, password: model.password, 
+        gender: model.gender} };
+
+    collection.findOneAndUpdate(filter, update)
+        .then(()=>{
+            cb()
+        },
+        err=>{console.log(err)})
+
 }

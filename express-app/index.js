@@ -13,6 +13,7 @@
 // Step 1: Import express
 const express = require("express");
 const userAuthRoutes = require("./user/routes/user-auth-routes");
+const userRoutes = require("./user/routes/user-routes");
 const bodyParser = require("body-parser");
 const mongodb = require("./config/mongodb");
 
@@ -31,6 +32,7 @@ server.use(bodyParser.json());
 
 // Routings.
 server.use("/api/user/auth", userAuthRoutes);
+server.use("/api/user/", userRoutes);
 
 // Step 4: Handle default requests.
 server.get("/", (req, res)=>{
