@@ -32,7 +32,17 @@ exports.update = (model, cb)=>{
             cb()
         },
         err=>{console.log(err)})
+}
 
+exports.getByID = (id, cb)=>{
+    // Step 1: Get Collection
+    const collection = db.getCollection("user");
+
+    // Step 2: Find data
+    collection.findOne({_id: ObjectId(id)})
+        .then(
+            (user)=> cb(user),
+            err=>{console.log(err)});
 }
 
 

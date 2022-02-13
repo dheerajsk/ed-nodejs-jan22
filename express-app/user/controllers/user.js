@@ -12,5 +12,11 @@ exports.update = (req, res)=>{
     repo.update(userToUpdate, ()=>{
         res.status(200).send("Data is Updated");
     })
-    
+}
+
+exports.getByID = (req, res)=>{
+    const id = req.params.id;
+    repo.getByID(id, (user)=>{
+        res.status(200).send(user);
+    });
 }

@@ -9,5 +9,7 @@ const router = express.Router();
 
 // Step 3: Configure Routes
 router.put("/", userController.update);
+// api/user/id
+router.get("/:id", userController.getByID);
 
 module.exports = router;
