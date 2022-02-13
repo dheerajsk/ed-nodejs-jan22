@@ -1,7 +1,7 @@
 Tweet Module
 
 Functionalities.
-1. New/Send Tweet
+1. New/Send Tweet - Post 
 2. Modify Tweet
 3. Deleting Tweet
 4. Get Tweets of user
