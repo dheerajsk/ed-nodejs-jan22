@@ -1,20 +1,20 @@
 const jwt = require("jsonwebtoken");
 
-const verify = (req, res, next)=>{
-    // 1. Read the token.
+const verify = (req,res, next) =>{
     const token = req.headers["authorization"];
-    
-    // 2. Is token exists
-    if(!token){
-        return res.status(401).send("Unauthorized");
-    }
 
-    // 3. Is token valid.
-    try{
+    if(!token) {
+        res.status(401).send("Unauthorized");
+    } else {
+        try
+        {
         const payload = jwt.verify(token, "This is my secret key");
         req.user = payload;
-    }catch(err){
-        return res.status(401).send("Token is invalid");
+        }
+        catch (err) {
+            res.status(401).send("Invalid Token");
+            console.log(err);
+        }
     }
     next();
 }

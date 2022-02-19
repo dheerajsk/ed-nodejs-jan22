@@ -17,6 +17,7 @@ const userRoutes = require("./user/routes/user-routes");
 const tweetRoutes = require("./tweet/routings/tweet");
 const bodyParser = require("body-parser");
 const mongodb = require("./config/mongodb");
+const errorHandler = require("./middlewares/error-handler");
 
 // Step 2: Create server
 const server = express();
@@ -36,9 +37,11 @@ server.use("/api/user/auth", userAuthRoutes);
 server.use("/api/user/", userRoutes);
 server.use("/api/tweet", tweetRoutes);
 
+server.use(errorHandler);
+
 server.use((req, res)=>{
     res.status(404).send("Please check your path");
-})
+});
 
 // Step 4: Handle default requests.
 server.get("/", (req, res)=>{

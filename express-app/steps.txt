@@ -22,12 +22,12 @@ For User api.
 6. Login API.
 
 How it is work?
-- First, user will login.
-- On login ,user will receive a token
-- Tweet using the token.
-- Without token, unauthorized.
+- First, user will login. - done
+- On login ,user will receive a token - done
+- Tweet using the token. ?
+- Without token, unauthorized. - done
 
-- Token Based Authentication.
+- Token Based Authentication. - done
 
 Authentication
     Get an ID(Access Cards).
@@ -38,3 +38,8 @@ Authorization.
     Developer-> Not authorized to process salary.
     HR-> nopt authorized to access clien't sprod env.
     Manager-> Authorized to approve holidays.
+
+
+Handling Error.
+Handle errors anywhere in app.
+log that into a file.
