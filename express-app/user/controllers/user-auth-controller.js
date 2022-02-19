@@ -19,7 +19,7 @@ exports.login = (req, res)=>{
    const password = req.body.password;
    repo.getByEmail(email, (record)=>{
     if(!record){
-        res.status(400).send("Invalid Email");
+        return res.status(400).send("Invalid Email");
     }
     if(record.password==password){
         // Create token using "jsonwebtoken"
@@ -32,9 +32,12 @@ exports.login = (req, res)=>{
             expiresIn: '2h'
         }
         );
-        record.token=token;
-        record.password=null;
-        res.status(200).send(record);
+        const respone = {
+            email:record.email,
+            id:record._id,
+            token: token
+        }
+        return res.status(200).send(respone);
     }else{
         res.status(400).send("Invalid Password");
     }
