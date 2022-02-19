@@ -50,4 +50,13 @@ exports.delete = (id, cb)=>{
             err=>{console.log(err)});
 }
 
+exports.getByEmail = (email, cb)=>{
+    getUserCollection().findOne({email})
+        .then(
+            (record)=>{
+                cb(record);
+            },
+            err=> {console.log(err)}
+        )
+}
 

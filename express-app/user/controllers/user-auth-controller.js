@@ -14,6 +14,17 @@ exports.register = (req, res)=>{
 }
 
 exports.login = (req, res)=>{
-    console.log("This is login request");
-    res.send("This is login");
+   const email = req.body.email;
+   const password = req.body.password;
+   repo.getByEmail(email, (record)=>{
+    if(!record){
+        res.status(400).send("Invalid Email");
+    }
+    if(record.password==password){
+        res.status(200).send("Login done");
+    }else{
+        res.status(400).send("Invalid Password");
+    }
+   })
+   
 }
