@@ -2,6 +2,7 @@
 
 const userModel = require("../models/user");
 const repo = require("../repositories/user");
+const jwt = require("jsonwebtoken");
 
 exports.register = (req, res)=>{
 
@@ -21,7 +22,19 @@ exports.login = (req, res)=>{
         res.status(400).send("Invalid Email");
     }
     if(record.password==password){
-        res.status(200).send("Login done");
+        // Create token using "jsonwebtoken"
+        const token = jwt.sign({
+            _id: record._id,
+            email: record.email
+        },
+        "This is my secret key",
+        {
+            expiresIn: '2h'
+        }
+        );
+        record.token=token;
+        record.password=null;
+        res.status(200).send(record);
     }else{
         res.status(400).send("Invalid Password");
     }
