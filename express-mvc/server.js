@@ -9,6 +9,8 @@ const server = express();
 
 mongodb.connect();
 
+// extended-true - allows any values.
+// false - allow string values.
 server.use(bodyParser.urlencoded({extended: false}));
 
 server.use("/user/", userRoutes);
