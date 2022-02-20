@@ -1,1 +1,12 @@
-Error: Uncaught exception in tweetError: Uncaught exception in tweet
+Error: Uncaught exception in tweetError: Uncaught exception in tweetError: Uncaught exception in tweet{}Error: Uncaught exception in tweetError: Uncaught exception in tweet
+Error: Uncaught exception in tweet
+    at exports.postTweet (/Users/dheerajkumar/Trainings/Edureka/ed-nodejs-jan22/express-app/tweet/controllers/tweet.js:6:11)
+    at Layer.handle [as handle_request] (/Users/dheerajkumar/Trainings/Edureka/ed-nodejs-jan22/express-app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/dheerajkumar/Trainings/Edureka/ed-nodejs-jan22/express-app/node_modules/express/lib/router/route.js:137:13)
+    at verify (/Users/dheerajkumar/Trainings/Edureka/ed-nodejs-jan22/express-app/middlewares/auth.js:19:5)
+    at Layer.handle [as handle_request] (/Users/dheerajkumar/Trainings/Edureka/ed-nodejs-jan22/express-app/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/dheerajkumar/Trainings/Edureka/ed-nodejs-jan22/express-app/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/dheerajkumar/Trainings/Edureka/ed-nodejs-jan22/express-app/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/dheerajkumar/Trainings/Edureka/ed-nodejs-jan22/express-app/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/dheerajkumar/Trainings/Edureka/ed-nodejs-jan22/express-app/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/dheerajkumar/Trainings/Edureka/ed-nodejs-jan22/express-app/node_modules/express/lib/router/index.js:341:12)
