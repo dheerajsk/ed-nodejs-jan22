@@ -1,5 +1,5 @@
 
-const db = require("../../config/mongodb");
+const db = require("../../../config/mongodb");
 const { ObjectId } = require("mongodb");
 
 const getUserCollection = ()=> {
