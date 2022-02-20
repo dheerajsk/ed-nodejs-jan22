@@ -1,5 +1,6 @@
-
+const path = require("path");
 
 exports.getRegisterView = (req, res)=>{
-    res.send("this is registeration view");
+    console.log(path.join(__dirname,"../views/registration.html"));
+    res.sendFile(path.join(__dirname,"../views/registration.html"));
 }
