@@ -20,21 +20,31 @@
             box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.2);
             padding: 12px;
             border-radius: 3px;
-            margin: 4px;
+            margin: 12px;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="tweet-card">
-            <img height="40px" width="40px" class="rounded"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1uO9yM0Gp_F2e2oAGZT5dBwsG8yf-WhG-KWYAJVEgsTSx0VAJHUmEv7pO8u9Y8CsXZNM&usqp=CAU"
-                alt="">
-            <span>Username</span>
-            <p>This is a tweet</p>
-            <p>20-Feb 8:00 PM</p>
-        </div>
+        <% content.forEach(tweet=>{ %>
+            <div class="tweet-card">
+                <img height="40px" width="40px" class="rounded"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1uO9yM0Gp_F2e2oAGZT5dBwsG8yf-WhG-KWYAJVEgsTSx0VAJHUmEv7pO8u9Y8CsXZNM&usqp=CAU"
+                    alt="">
+                <span>
+                    <%= tweet.useID %>
+                </span>
+                <p>
+                    <%= tweet.content %>
+                </p>
+                <p>
+                    <%= tweet.timestamp %>
+                </p>
+            </div>
+            <% }) %>
+
+
     </div>
 
 </body>

@@ -17,7 +17,7 @@ exports.add = (model, cb)=>{
 
 exports.getByUserID = (id, cb)=>{
     // Step 1: Access collection.
-    getTweetCollection().find({userID: id}).toArray()
+    getTweetCollection().find({userID: ObjectId(id)}).toArray()
         .then((tweets)=>{
             cb(tweets);
         },
