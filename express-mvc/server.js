@@ -4,8 +4,15 @@ const userRoutes = require("./src/user/routes/user");
 const path = require("path");
 const bodyParser = require("body-parser");
 const mongodb = require("./config/mongodb");
+const session = require("express-session");
 
 const server = express();
+
+server.use(session({
+    secret: "This is my private key",
+    cookie: {maxAge: 300000},
+    saveUninitialized: false
+}));
 
 mongodb.connect();
 
