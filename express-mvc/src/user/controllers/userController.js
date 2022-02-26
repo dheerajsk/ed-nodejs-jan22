@@ -27,6 +27,13 @@ exports.register = (req, res)=>{
 exports.login = (req, res)=>{
    repo.getByEmail(req.body.email, (record)=>{
        if(record && record.password==req.body.password){
+           // random numbers.
+           // messageservice send message to user's phone
+           // store otp in collection, generatedON, expire in 4 hrs.
+           // redirect to otp verificaiton page.
+
+           // otp, verifty with otp stored in db
+           // user is verified.
         req.session.authenticated=true;
         req.session.user = record;
         res.sendFile(path.join(__dirname,"../../shared/views/home.html"));  
