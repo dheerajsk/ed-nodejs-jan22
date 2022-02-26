@@ -24,3 +24,15 @@
     3. set views paths.
     4. rename html to ejs.
     5. res.render("name of view");
+
+
+27/02
+1. Partial Views in EJS.
+2. Mocha and Chai.
+3. MicroServices. (Theoritically)
+4. Project Discussion.
+5. GraphQL.
+6. Deploying Node in Docker container.
+7. Socket IO.
+8. Q&A.
+9. Interview Tips.

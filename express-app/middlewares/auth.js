@@ -12,7 +12,7 @@ const verify = (req,res, next) =>{
         req.user = payload;
         }
         catch (err) {
-            res.status(401).send("Invalid Token");
+            return res.status(401).send("Invalid Token");
             console.log(err);
         }
     }
