@@ -2,12 +2,18 @@
 const express = require("express");
 const userRoutes = require("./src/user/routes/user");
 const tweetRoutes = require("./src/tweet/routes/tweetRoutes");
-const path = require("path");
 const bodyParser = require("body-parser");
 const mongodb = require("./config/mongodb");
 const session = require("express-session");
+const path = require("path");
 
 const server = express();
+
+// Server settings.
+server.set("view engine", "ejs");
+server.set("views",
+[path.join(__dirname, "./src/tweet/views"), 
+ path.join(__dirname, "./src/user/views")])
 
 server.use(session({
     secret: "This is my private key",

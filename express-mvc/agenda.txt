@@ -16,3 +16,11 @@
 1. Add Controller for tweets.
 2. Add repo to get tweets of user.
 3. Create view to display tweets.
+
+
+// Steps
+    1. npm i ejs
+    2. set view engine
+    3. set views paths.
+    4. rename html to ejs.
+    5. res.render("name of view");
