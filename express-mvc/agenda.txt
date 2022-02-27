@@ -27,9 +27,54 @@
 
 
 27/02
-1. Partial Views in EJS.
-2. Mocha and Chai.
+1. Partial Views in EJS. - done.
+2. Mocha and Chai. - done.
 3. MicroServices. (Theoritically)
+    A large application.
+        - CRM (customer, mettings, contracts, invoices.)
+            crmdb
+        1 million.
+        - User (admin, roles) - 1000
+            erpdb
+        - Employee (timesheets, holidays)
+            employeedb
+        - Workflow
+        - ERP.
+    All modules will be a separate applicaiion/service
+    Separate database.
+    Seperate deployments.
+
+3100, 3200, 3300, 3400, 3500.
+
+
+localhost:3000/crm - redirect to 3100
+localhost:3000/erp - redirect to 3200
+localhost:3000/user - redirect to 3300
+
+API Gateway (Facade). (3000)
+
+- Easy to maintain.
+- Easy to test.
+- Easy to Scale.
+- Cost efficient.
+
+- Api Gateway
+- LoadBalancers.
+- docker containers.
+- Kuberenets.
+- MessageQueue Services.
+    [m1toWF, ] - Buffer.
+    [ResponseToERP]
+        - efficient.
+
+
+React/Angular.
+
+
+MicroServices
+- create separate app for every module.
+
+
 4. Project Discussion.
 5. GraphQL.
 6. Deploying Node in Docker container.
