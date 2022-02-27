@@ -80,11 +80,28 @@ MicroServices
 4. Project Discussion.
     
 5. GraphQL.
-6. Deploying Node in Docker container.
+6. Deploying Node in Docker container. - Done
 7. Socket IO. - Done
     REST API -> Conneciton Less.
     Chat system, notification system.
         open connection phone->Server.
 
-8. Q&A.
+8. Q&A. ?
 9. Interview Tips.
+    System Design ?
+    REST API.
+    View Engine?
+    How to implement Authentication?
+    Difference betwen mvc and rest api?
+    How to add document in mongodb?
+    sql vs nosql ?
+    express ?
+    how to create servers?
+    callback vs promise?
+    chaining of promises?
+    handling errors?
+    middlewares are ?
+        Algorithms ?
+        DevOPS.
+
+
