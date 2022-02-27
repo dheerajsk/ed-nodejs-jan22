@@ -1,7 +1,7 @@
 
 exports.add = (num1, num2)=>{
     return new Promise((resolve, reject)=>{
-        setTimeout(()=>{resolve(num1+num2)}, 1000);
+        setTimeout(()=>{resolve(num1+num2)}, 4000);
     });
 }
 

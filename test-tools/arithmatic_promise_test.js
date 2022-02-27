@@ -5,6 +5,7 @@ const expect = chai.expect;
 describe("Async Arithmatic Tests", ()=>{
 
     it("Should add two no asynchornously", async()=>{
+     
         // Arrange
          const num1=10;
          const num2=20;
@@ -18,7 +19,7 @@ describe("Async Arithmatic Tests", ()=>{
         // Assert
         expect(actualResult).to.be.equal(expectedResult);
 
-    });
+    }).timeout(5000);
 
     it("Should add two no asynchornously", (done)=>{
         // Arrange
@@ -36,7 +37,7 @@ describe("Async Arithmatic Tests", ()=>{
             done();
         });
         
-    });
+    }).timeout(5000);
 
     it("Should just pass", ()=>{
 
