@@ -43,3 +43,12 @@ Authorization.
 Handling Error.
 Handle errors anywhere in app.
 log that into a file.
+
+
+
+Docker.
+- COntainerization or Virtualization.
+- Stable config.
+- Docker Image - template of cofigs.
+    docker build.
+- RUn image in docker container.

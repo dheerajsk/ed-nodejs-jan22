@@ -78,12 +78,13 @@ MicroServices
 
 
 4. Project Discussion.
+    
 5. GraphQL.
 6. Deploying Node in Docker container.
-7. Socket IO.
+7. Socket IO. - Done
     REST API -> Conneciton Less.
     Chat system, notification system.
         open connection phone->Server.
-        
+
 8. Q&A.
 9. Interview Tips.
