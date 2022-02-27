@@ -29,7 +29,7 @@
 27/02
 1. Partial Views in EJS. - done.
 2. Mocha and Chai. - done.
-3. MicroServices. (Theoritically)
+3. MicroServices. (Theoritically) - done.
     A large application.
         - CRM (customer, mettings, contracts, invoices.)
             crmdb
@@ -45,6 +45,8 @@
     Seperate deployments.
 
 3100, 3200, 3300, 3400, 3500.
+
+Tweet, Message, User.
 
 
 localhost:3000/crm - redirect to 3100
@@ -79,5 +81,9 @@ MicroServices
 5. GraphQL.
 6. Deploying Node in Docker container.
 7. Socket IO.
+    REST API -> Conneciton Less.
+    Chat system, notification system.
+        open connection phone->Server.
+        
 8. Q&A.
 9. Interview Tips.
