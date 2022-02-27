@@ -52,3 +52,6 @@ Docker.
 - Docker Image - template of cofigs.
     docker build.
 - RUn image in docker container.
+
+MAcBook - 8080
+Container - NodeApp (8090)
