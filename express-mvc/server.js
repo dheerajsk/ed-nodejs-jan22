@@ -13,7 +13,8 @@ const server = express();
 server.set("view engine", "ejs");
 server.set("views",
 [path.join(__dirname, "./src/tweet/views"), 
- path.join(__dirname, "./src/user/views")])
+ path.join(__dirname, "./src/user/views"),
+ path.join(__dirname, "./src/shared/views")])
 
 server.use(session({
     secret: "This is my private key",
@@ -32,6 +33,7 @@ server.use("/tweet/", tweetRoutes);
 
 server.listen(3000);
 server.get("/", (req, res)=>{
+    req.session.destroy();
     console.log(path.join(__dirname,"./src/shared/views/home.html"))
     res.sendFile(path.join(__dirname,"./src/shared/views/home.html"));
 });

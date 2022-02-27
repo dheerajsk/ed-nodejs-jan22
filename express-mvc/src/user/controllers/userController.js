@@ -34,6 +34,7 @@ exports.login = (req, res)=>{
 
            // otp, verifty with otp stored in db
            // user is verified.
+           req.session.clearSession
         req.session.authenticated=true;
         req.session.user = record;
         res.sendFile(path.join(__dirname,"../../shared/views/home.html"));  
